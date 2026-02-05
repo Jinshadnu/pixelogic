@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Search, Grid, List, Play, ExternalLink, Calendar, Tag, ArrowRight } from 'lucide-react';
 import { projects } from '@/data/mockData';
 import { ProjectCategory } from '@/types';
@@ -25,7 +25,7 @@ const PortfolioGallery = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -35,7 +35,7 @@ const PortfolioGallery = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,

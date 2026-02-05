@@ -28,7 +28,7 @@ const Preloader = () => {
             className="fixed inset-0 z-[100] flex items-center justify-center bg-[#F2EFE9] overflow-hidden"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
+            transition={{ duration: 0.8, ease: "easeInOut" as const }}
         >
             {/* Video Background/Intro */}
             <div className="absolute inset-0 z-0">
@@ -55,7 +55,7 @@ const Preloader = () => {
                     }}
                     transition={{ 
                         duration: 0.8,
-                        ease: "easeOut",
+                        ease: "easeOut" as const,
                     }}
                     className="flex items-center gap-1 mb-8"
                 >
@@ -69,7 +69,7 @@ const Preloader = () => {
                     <motion.div 
                         initial={{ x: "-100%" }}
                         animate={{ x: "0%" }}
-                        transition={{ duration: 2.2, ease: "easeInOut" }}
+                        transition={{ duration: 2.2, ease: "easeInOut" as const }}
                         className="absolute inset-0 bg-black"
                     />
                 </div>

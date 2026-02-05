@@ -61,7 +61,7 @@ const Hero = () => {
                     <motion.span
                         initial={{ width: "0%" }}
                         animate={{ width: "100%" }}
-                        transition={{ duration: 1, delay: 0.8, ease: "circOut" }}
+                        transition={{ duration: 1, delay: 0.8, ease: "circOut" as const }}
                         className="absolute bottom-4 left-0 h-[0.3em] bg-emerald-300/40 -z-10 -rotate-1 rounded-sm"
                     />
                     Short form
@@ -86,7 +86,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="text-xl text-black/60 max-w-lg leading-relaxed relative z-10"
                 >
-                    We help brands build authority and generate leads through <span className="relative inline-block px-1"><motion.span initial={{ width: "0%" }} animate={{ width: "100%" }} transition={{ duration: 0.8, delay: 1.5, ease: "circOut" }} className="absolute bottom-1 left-0 h-[0.4em] bg-yellow-200/60 -z-10 -rotate-1 rounded-sm" />strategic short-form content.</span> No fluff, just results.
+                    We help brands build authority and generate leads through <span className="relative inline-block px-1"><motion.span initial={{ width: "0%" }} animate={{ width: "100%" }} transition={{ duration: 0.8, delay: 1.5, ease: "circOut" as const }} className="absolute bottom-1 left-0 h-[0.4em] bg-yellow-200/60 -z-10 -rotate-1 rounded-sm" />strategic short-form content.</span> No fluff, just results.
                 </motion.p>
 
                 {/* CTA */}
@@ -108,7 +108,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50, rotateX: 10 }}
                         animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        transition={{ duration: 0.8, ease: "easeOut" as const }}
                     >
                         <motion.div
                             animate={{ 
@@ -118,7 +118,7 @@ const Hero = () => {
                             transition={{ 
                                 duration: 8,
                                 repeat: Infinity,
-                                ease: "easeInOut"
+                                ease: "easeInOut" as const
                             }}
                             className="relative mx-auto w-[320px] h-[650px] bg-black rounded-[3.5rem] border-[8px] border-black shadow-2xl overflow-hidden ring-1 ring-black/5 transform-preserve-3d"
                         >
